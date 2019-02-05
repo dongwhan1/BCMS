@@ -1,0 +1,154 @@
+{% extends 'bcms/base.html' %}
+
+{% block content %}
+    <div class="left-box">
+        <div class="folium-map" id="map_08ce9e4650a64833b4819dbbb43e583b"></div>
+    </div>
+    <div class="right-box">
+    {% for post in posts %}
+        <div class="post">
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.comments.count }}</a>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}
+<script>
+
+
+        var bounds = null;
+
+
+    var map_08ce9e4650a64833b4819dbbb43e583b = L.map(
+        'map_08ce9e4650a64833b4819dbbb43e583b', {
+        center: [36.831498, 127.158242],
+        zoom: 17,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+
+
+    var tile_layer_93bd8e98907b40f4a45aec126e7520c6 = L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 1,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_08ce9e4650a64833b4819dbbb43e583b);
+
+        var marker_2c9d701988f64fe99726015dd2a8997f = L.marker(
+            [36.831852, 127.158203],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_08ce9e4650a64833b4819dbbb43e583b);
+
+
+
+                var icon_1dfef3f429e446889b4d60b383f81a9e = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2c9d701988f64fe99726015dd2a8997f.setIcon(icon_1dfef3f429e446889b4d60b383f81a9e);
+
+
+            var popup_5abe11f30b7d4a11ad553bd20d33ed8e = L.popup({maxWidth: '300'
+
+            });
+
+
+                var html_48d4480a7ba8480aa4c1695fdbf407f8 = $(`<div id="html_48d4480a7ba8480aa4c1695fdbf407f8" style="width: 100.0%; height: 100.0%;">본관</div>`)[0];
+                popup_5abe11f30b7d4a11ad553bd20d33ed8e.setContent(html_48d4480a7ba8480aa4c1695fdbf407f8);
+
+
+            marker_2c9d701988f64fe99726015dd2a8997f.bindPopup(popup_5abe11f30b7d4a11ad553bd20d33ed8e)
+            ;
+
+
+
+
+        var marker_97669ebe2d5746caac9923bc85980051 = L.marker(
+            [36.831689, 127.159217],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_08ce9e4650a64833b4819dbbb43e583b);
+
+
+
+                var icon_81c4f34f937244ee89e9e31f11c574aa = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'green',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_97669ebe2d5746caac9923bc85980051.setIcon(icon_81c4f34f937244ee89e9e31f11c574aa);
+
+
+            var popup_1774be4cae884d74a48540bd74671018 = L.popup({maxWidth: '300'
+
+            });
+
+
+                var html_2d62c95baa9c4ef7833c0e405eb1989c = $(`<div id="html_2d62c95baa9c4ef7833c0e405eb1989c" style="width: 100.0%; height: 100.0%;">아단관</div>`)[0];
+                popup_1774be4cae884d74a48540bd74671018.setContent(html_2d62c95baa9c4ef7833c0e405eb1989c);
+
+
+            marker_97669ebe2d5746caac9923bc85980051.bindPopup(popup_1774be4cae884d74a48540bd74671018)
+            ;
+
+
+
+
+        var marker_81db9b8a951d4ba69b73de30f0469b6e = L.marker(
+            [36.829987, 127.15831],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_08ce9e4650a64833b4819dbbb43e583b);
+
+
+
+                var icon_4d5a0a7545e047039debd783cd91ca30 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'red',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_81db9b8a951d4ba69b73de30f0469b6e.setIcon(icon_4d5a0a7545e047039debd783cd91ca30);
+
+
+            var popup_98dd643c06024da98dc77a7e7c069e4f = L.popup({maxWidth: '300'
+
+            });
+
+
+                var html_31e1cfddf66f4b368a3eaa26341cabd0 = $(`<div id="html_31e1cfddf66f4b368a3eaa26341cabd0" style="width: 100.0%; height: 100.0%;">현암관</div>`)[0];
+                popup_98dd643c06024da98dc77a7e7c069e4f.setContent(html_31e1cfddf66f4b368a3eaa26341cabd0);
+
+
+            marker_81db9b8a951d4ba69b73de30f0469b6e.bindPopup(popup_98dd643c06024da98dc77a7e7c069e4f)
+            ;
+
+
+
+</script>
