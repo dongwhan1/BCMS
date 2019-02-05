@@ -1,6 +1,10 @@
-{% extends 'bcms/base.html' %}
-
-{% block content %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BCMS</title>
+</head>
+<body>
     <div id="map" style="width:500px;height:400px"></div>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b29d74e9682893bb288211e36af79f54"></script>
     <script>
@@ -12,4 +16,6 @@
 
         var map = new.daum.maps.Map(container, options);
     </script>
-{% endblock %}
+</body>
+</html>
+
