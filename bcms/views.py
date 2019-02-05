@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
-from .models import Post, Post2
+from .models import Post
 from .forms import PostForm, CommentForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
@@ -13,10 +13,6 @@ def home(request):
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'bcms/post_list.html', {'posts': posts})
-
-def post_list2(request):
-    posts = Post2.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'bcms/post_list2.html', {'posts': posts})
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
@@ -78,3 +74,6 @@ def post_remove(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
     return redirect('post_list')
+
+def map(request):
+    return render(request, 'bcms/Map.html')
