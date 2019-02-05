@@ -5,11 +5,11 @@
 	<title>Daum 지도 시작하기</title>
 </head>
 <body>
-	<div id="map" style="width:100%;height:100%;"></div>
+	<div id="map" style="width:100%;height:500px;"></div>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b29d74e9682893bb288211e36af79f54"></script>
 	<script>
-		var mapContainer = document.getElementById('map');
-		var mapOption = {
+		var mapContainer = document.getElementById('map'),
+		    mapOption = {
 			center: new daum.maps.LatLng(36.831498, 127.158242),
 			level: 4
 		};
