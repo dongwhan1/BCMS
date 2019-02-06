@@ -4,19 +4,27 @@ from .models import Post, Like
 from .forms import PostForm, CommentForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm
-import json
 from django.http import HttpResponseRedirect
-from django.views.decorators.http import require_POST
-from django.urls import resolve
 
 # Create your views here.
 def home(request):
     return render(request, 'bcms/home.html')
 
 def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, 'bcms/post_list.html', {'posts': posts})
+
+def newsfeed1(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now(), board=1).order_by('-published_date')
+    return render(request, 'bcms/newsfeed1.html', {'posts': posts})
+
+def newsfeed2(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now(), board=2).order_by('-published_date')
+    return render(request, 'bcms/newsfeed2.html', {'posts': posts})
+
+def newsfeed3(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now(), board=3).order_by('-published_date')
+    return render(request, 'bcms/newsfeed3.html', {'posts': posts})
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)

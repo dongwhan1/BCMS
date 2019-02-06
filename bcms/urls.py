@@ -14,4 +14,8 @@ urlpatterns = [
     path(r'post/<pk>/remove/', views.post_remove, name='post_remove'),
     path(r'map/', views.map, name='map'),
     path(r'<pk>/like/', views.post_like, name='post_like'),
+    path(r'newsfeed1/', views.newsfeed1, name='newsfeed1'),
+    path(r'newsfeed2/', views.newsfeed2, name='newsfeed2'),
+    path(r'newsfeed3/', views.newsfeed3, name='newsfeed3'),
+
 ]
