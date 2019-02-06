@@ -1,10 +1,14 @@
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
-from .models import Post
+from .models import Post, Like
 from .forms import PostForm, CommentForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
+import json
+from django.http import HttpResponseRedirect
+from django.views.decorators.http import require_POST
+from django.urls import resolve
 
 # Create your views here.
 def home(request):
@@ -29,7 +33,7 @@ def post_new(request):
             return redirect('post_detail', pk=post.pk)
     else:
         form = PostForm()
-    return render(request, 'bcms/post_edit.html', {'form':form})
+    return render(request, 'bcms/post_edit.html', {'form':form},)
 
 @login_required
 def post_edit(request, pk):
@@ -52,6 +56,7 @@ def add_comment_to_post(request, pk):
         if form.is_valid():
             comment = form.save(commit=False)
             comment.post = post
+            comment.author = request.user
             comment.save()
             return redirect('post_detail', pk=post.pk)
     else:
@@ -77,3 +82,16 @@ def post_remove(request, pk):
 
 def map(request):
     return render(request, 'bcms/Map.html')
+
+@login_required # TODO: Ajax로 처리하기
+def post_like(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    post_like, post_like_created = post.like_set.get_or_create(user=request.user)
+
+    if not post_like_created:
+        post_like.delete()
+
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+def login(request):
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))

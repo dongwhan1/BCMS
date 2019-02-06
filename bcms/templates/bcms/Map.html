@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-	<title>Daum 지도 시작하기</title>
+	<title>BCMS</title>
 </head>
 <body>
-	<div id="map" style="width:100%;height:350px;"></div>
+	<div id="map" style="width:100%;height:350px;">BCMS</div>
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b29d74e9682893bb288211e36af79f54"></script>
 	<script>
 	    var MARKER_WIDTH = 33,
@@ -30,7 +30,7 @@ var markerSize = new daum.maps.Size(MARKER_WIDTH, MARKER_HEIGHT),
 var positions = [
         new daum.maps.LatLng(36.831873, 127.158165),
         new daum.maps.LatLng(36.831624, 127.159168),
-        new daum.maps.LatLng(36.830014, 127.158229)
+        new daum.maps.LatLng(36.830014, 127.158229),
     ],
     selectedMarker = null;
 
@@ -69,14 +69,11 @@ function addMarker(position, normalOrigin, overOrigin, clickOrigin) {
 
     daum.maps.event.addListener(marker, 'mouseover', function() {
 
-        // 클릭된 마커가 없고, mouseover된 마커가 클릭된 마커가 아니면
-        // 마커의 이미지를 오버 이미지로 변경합니다
         if (!selectedMarker || selectedMarker !== marker) {
             marker.setImage(overImage);
         }
     });
 
-    // 마커에 mouseout 이벤트를 등록합니다
     daum.maps.event.addListener(marker, 'mouseout', function() {
 
         if (!selectedMarker || selectedMarker !== marker) {

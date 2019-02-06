@@ -8,8 +8,7 @@
 
     {% if next %}
         {% if user.is_authenticated %}
-        <p>Your account doesn't have access to this page. To proceed,
-        please login with an account that has access.</p>
+            <meta http-equiv="refresh" content="0;url=/">
         {% else %}
         <p>Please login to see this page.</p>
         {% endif %}
@@ -34,5 +33,6 @@
 
     {# Assumes you setup the password_reset view in your URLconf #}
     <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+    <p>아이디가 없으신가요? <a href="/accounts/signup">회원가입</a></p>
 
 {% endblock %}

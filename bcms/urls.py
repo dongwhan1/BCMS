@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 
@@ -13,4 +13,5 @@ urlpatterns = [
     path(r'post/<pk>/publish/', views.post_publish, name='post_publish'),
     path(r'post/<pk>/remove/', views.post_remove, name='post_remove'),
     path(r'map/', views.map, name='map'),
+    path(r'<pk>/like/', views.post_like, name='post_like'),
 ]
