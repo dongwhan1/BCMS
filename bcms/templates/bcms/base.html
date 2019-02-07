@@ -8,6 +8,7 @@
     <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{% static 'css/bcms.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-3.3.1.js"></script>
     <script>
         function mover()
         {
@@ -16,33 +17,78 @@
 
         }
     </script>
+    <style>
+      #menu_bar {
+        display: block;
+        background-color: #aaaaaa;
+        width: 100%;
+        height: auto;
+        opacity: 0.75;
+      }
 
+      #menu_icon {
+        width: 30px;
+      }
+
+      #menu_board {
+        background-color: #dddddd;
+        opacity: 0.5;
+      }
+    </style>
+    <script>
+      $(function(){
+        $('.middle').bind('load', function(){
+          var parentwidth = parseFloat($(".middle").parent().parent().css("width"));
+          var thiswidth = parseFloat($(".middle").css("width"));
+          $(".middle").css({"margin-left": (parentwidth-thiswidth)/2 + "px"});
+        });
+        $('.middle').trigger('load');
+      });
+
+      $(function(){
+        $('#menu_bar').bind("click", function(){
+          $("#menu_board").slideToggle();
+        });
+        $("#menu_bar").trigger("click");
+      });
+
+      $(document).ready(function(){
+        $(window).resize(function(){
+          $(".middle").trigger('load');
+        });
+      });
+    </script>
 </head>
 <body>
     <div class="page-header">
-        {% if user.is_authenticated %}
-            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            {% if user.is_staff %}
-                <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+        <div style="margin: 10px;">
+            {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+                {% if user.is_staff %}
+                    <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+                {% endif %}
+                <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+            {% else %}
+                <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
             {% endif %}
-            <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
-        {% else %}
-            <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
-        {% endif %}
-            <h1><a href="/newsfeed">Bugil Community Mapping System</a></h1>
+                <h1><a href="/newsfeed" style="font-size: 40px;">Bugil Community Mapping System</a></h1>
+        </div>
+
+        <div style="background-image: url('bg.jpg'); padding: 10px; background-position-x: -3700px; background-position-y: center;">
+            <div id="menu_bar"><img id="menu_icon" class="middle" src="resource/menu_icon.png"></div>
+            <div id="menu_board">
+                테스트입니다.
+            </div>
+        </div>
     </div>
 
-    <div>
-        {% block content %}
-        {% endblock %}
-
-        {% if messages %}
-        <script type="text/javascript">
-            {% for message in messages %}
-            alert("{{ message.message }}");
-            {% endfor %}
-        </script>
-        {% endif %}
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
     </div>
 </body>
 </html>
