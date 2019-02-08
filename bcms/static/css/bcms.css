@@ -150,6 +150,7 @@ body#home .middle {
 
 .dev_info {
   display: block;
+  padding: 5px;
   margin-top: 100px;
   font-size: 12px;
   text-align: center;
@@ -189,4 +190,9 @@ body#home .middle {
 
 hr {
   border-top: 1px solid #000000;
+}
+
+.post_board {
+    background-color: #eeeeff;
+    padding: 10px;
 }

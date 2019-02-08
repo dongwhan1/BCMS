@@ -9,12 +9,12 @@
             </div>
             <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.text }}</a></h1>
             <p>{{ post.text|linebreaksbr }}</p>
+        </div>
             <a href="{% url 'post_detail' pk=post.pk %}">댓글: {{ post.comments.count }}개</a>
             <a href="{% url 'post_like' pk=post.pk %}">{{ post.like_user_set.count }} like{{ post.like_user_set.count|pluralize }}</a>
             {% for like_user in post.like_user_set.all %}
                 {{ like_user.profile.nickname }}
             {% endfor %}
-        </div>
     </div>
     {% endfor %}
 {% endblock %}
