@@ -1,72 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6fa00487-bcaa-4ab8-8c54-47f885333660" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bcms/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/bcms/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bcms/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bcms/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/bcms/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bcms/templates/bcms/Map.html" beforeDir="false" afterPath="$PROJECT_DIR$/bcms/templates/bcms/Map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bcms/templates/bcms/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/bcms/templates/bcms/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bcms/templates/bcms/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/bcms/templates/bcms/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bcms/templates/bcms/newsfeed1.html" beforeDir="false" afterPath="$PROJECT_DIR$/bcms/templates/bcms/newsfeed1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bcms/templates/bcms/newsfeed2.html" beforeDir="false" afterPath="$PROJECT_DIR$/bcms/templates/bcms/newsfeed2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bcms/templates/bcms/newsfeed3.html" beforeDir="false" afterPath="$PROJECT_DIR$/bcms/templates/bcms/newsfeed3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bcms/templates/bcms/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/bcms/templates/bcms/post_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bcms/templates/bcms/post_draft_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/bcms/templates/bcms/post_draft_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bcms/templates/bcms/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/bcms/templates/bcms/post_list.html" afterDir="false" />
-    </list>
+    <list default="true" id="6fa00487-bcaa-4ab8-8c54-47f885333660" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DockManager">
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://D:/새 폴더/test.html">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="292">
-                    <caret line="48" column="13" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="48" selection-end-column="13" />
-                    <folding>
-                      <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                      <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="false">
-              <entry file="file://D:/새 폴더/test2.html">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="164">
-                    <caret line="43" column="43" lean-forward="true" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
-                    <folding>
-                      <element signature="n#style#0;n#a#0;n#h1#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://D:/새 폴더/test_post.html">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="418">
-                    <caret line="109" column="30" lean-forward="true" selection-start-line="109" selection-start-column="30" selection-end-line="109" selection-end-column="30" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -77,18 +17,6 @@
               <caret line="72" column="18" lean-forward="true" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#h1#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bcms/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="54" lean-forward="true" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,22 +79,30 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bcms/templates/bcms/post_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+            <state relative-caret-position="285">
+              <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bcms/static/css/bcms.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="69" column="1" lean-forward="true" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bcms/templates/bcms/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+            <state relative-caret-position="285">
+              <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -229,7 +165,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="width" value="977" />
     <option name="height" value="1038" />
@@ -331,11 +267,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dongw\myvenv\BCMS\bcms\static\css" />
       <recent name="C:\Users\dongw\myvenv\BCMS\bcms\image" />
       <recent name="C:\Users\dongw\myvenv\BCMS" />
       <recent name="C:\Users\dongw\myvenv\BCMS\bcms\templates\bcms" />
       <recent name="C:\Users\dongw\myvenv\BCMS\bcms\templates" />
-      <recent name="C:\Users\dongw\myvenv\BCMS\accounts\templates" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dongw\myvenv\BCMS\bcms\templates\bcms" />
@@ -393,7 +329,7 @@
     <frame x="-6" y="0" width="781" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30376345" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26478493" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="0" />
@@ -621,19 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bcms/templates/bcms/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/새 폴더/test2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
@@ -699,6 +622,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bcms/templates/bcms/post_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://D:/새 폴더/test_post.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -706,10 +636,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bcms/templates/bcms/post_list.html">
+    <entry file="file://$PROJECT_DIR$/bcms/static/css/bcms.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+        <state relative-caret-position="171">
+          <caret line="69" column="1" lean-forward="true" selection-start-line="69" selection-start-column="1" selection-end-line="69" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bcms/templates/bcms/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
