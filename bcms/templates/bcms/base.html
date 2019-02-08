@@ -17,24 +17,7 @@
 
         }
     </script>
-    <style>
-      #menu_bar {
-        display: block;
-        background-color: #aaaaaa;
-        width: 100%;
-        height: auto;
-        opacity: 0.75;
-      }
 
-      #menu_icon {
-        width: 30px;
-      }
-
-      #menu_board {
-        background-color: #dddddd;
-        opacity: 0.5;
-      }
-    </style>
     <script>
       $(function(){
         $('.middle').bind('load', function(){
@@ -61,7 +44,7 @@
 </head>
 <body>
     <div class="page-header">
-        <div style="margin: 10px;">
+        <div id="page_head1">
             {% if user.is_authenticated %}
                 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
                 {% if user.is_staff %}
@@ -74,7 +57,7 @@
                 <h1><a href="/newsfeed" style="font-size: 40px;">Bugil Community Mapping System</a></h1>
         </div>
 
-        <div style="background-image: url('bg.jpg'); padding: 10px; background-position-x: -3700px; background-position-y: center;">
+        <div id="page_head2">
             <div id="menu_bar"><img id="menu_icon" class="middle" src="https://i.imgur.com/OuqOJ5e.png"></div>
             <div id="menu_board">
                 테스트입니다.
@@ -84,11 +67,16 @@
 
     <div class="content container">
         <div class="row">
-            <div class="col-md-8">
+            <div>
                 {% block content %}
                 {% endblock %}
             </div>
         </div>
     </div>
 </body>
+
+<footer>
+    <font class="dev_info">Copyright(C)2019 by Team Banada | 류동환(DongWhan Ryu) : 총괄(Manager), 백엔드(Back End), 데이터베이스(DB), 서버 관리(Server) | 김민재(KimGoon / Minjae Kim) : 프론트엔드(Front End), 디자인(Designer)</font>
+</footer>
+
 </html>

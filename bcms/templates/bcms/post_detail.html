@@ -1,6 +1,7 @@
 {% extends 'bcms/base.html' %}
 
 {% block content %}
+<div class="post_board">
     <div class="post">
         {% if post.published_date %}
             <div class="date">
@@ -27,4 +28,5 @@
     {% empty %}
         <p>No comments here yet :(</p>
     {% endfor %}
+</div>
 {% endblock %}
