@@ -161,7 +161,7 @@ body#home .middle {
 }
 
 #page_head1 {
-  margin: 10px;
+  padding: 10px;
 }
 
 #page_head2 {
@@ -196,3 +196,47 @@ hr {
     background-color: #eeeeff;
     padding: 10px;
 }
+
+.wrap {
+			padding: 10px;
+			background-color: #ffffff;
+			width: 160px;
+			border-radius: 10px;
+			white-space: pre-line;
+			position: absolute;
+			bottom: 44px;
+			left: -96px;
+		}
+		.body {
+			display: inline-block;
+			width: 160px;
+			white-space: pre-line;
+			margin-top: 5px;
+		}
+		.close {
+			background-color: #ffffff;
+			border: 0;
+			font-size: 12px;
+			outline: 0;
+			padding: 0;
+			float: right;
+		}
+		.smt {
+			background-color: #ffffff;
+			border: 0;
+			font-size: 12px;
+			outline: 0;
+			padding: 0;
+		}
+		h2 {
+			text-decoration: none;
+			margin: 2px;
+			font-size: 20px;
+		}
+		input {
+			width: 100%;
+		}
+		textarea {
+			height: 100px;
+			resize: none;
+		}

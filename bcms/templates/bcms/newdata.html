@@ -1,0 +1,14 @@
+{% extends 'bcms/base.html' %}
+
+{% block content %}
+    <script>
+        $(function(){
+            $("textarea").css({"display": "block"});
+        });
+    </script>
+    <h1>New Map Data</h1>
+    <form method="POST">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}

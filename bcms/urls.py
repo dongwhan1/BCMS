@@ -17,5 +17,6 @@ urlpatterns = [
     path(r'newsfeed1/', views.newsfeed1, name='newsfeed1'),
     path(r'newsfeed2/', views.newsfeed2, name='newsfeed2'),
     path(r'newsfeed3/', views.newsfeed3, name='newsfeed3'),
-
+    path(r'new_map_data/', views.newdata, name='newdata'),
+    path(r'suggest/', views.suggest, name='suggest'),
 ]

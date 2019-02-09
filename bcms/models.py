@@ -51,3 +51,19 @@ def publish(self):
     self.published_date = timezone.now()
     self.save()
 
+class Map_Data(models.Model):
+    author = models.CharField(max_length=200)
+    locationx = models.FloatField()
+    locationy = models.FloatField()
+    title = models.CharField(max_length=200)
+    information = models.TextField()
+
+    def __str__(self):
+        return self.title
+
+class Suggest_Data(models.Model):
+    author = models.CharField(max_length=200)
+    text = models.TextField()
+
+    def __str__(self):
+        return self.text

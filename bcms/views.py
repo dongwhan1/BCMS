@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
-from .models import Post, Like
-from .forms import PostForm, CommentForm
+from .models import Post, Like, Map_Data
+from .forms import PostForm, CommentForm, Map_Data_Form, Suggest_Form
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
@@ -42,6 +42,19 @@ def post_new(request):
     else:
         form = PostForm()
     return render(request, 'bcms/post_edit.html', {'form':form},)
+
+def newdata(request):
+    if request.method == 'POST':
+        form = Map_Data_Form(request.POST)
+        if form.is_valid():
+            map_data = form.save(commit=False)
+            map_data.locationx = request.loc_x
+            map_data.locationy = request.loc_y
+            map_data.save()
+            return redirect('map')
+    else:
+        form = Map_Data_Form()
+    return render(request, 'bcms/newdata.html', {'form': form})
 
 @login_required
 def post_edit(request, pk):
@@ -103,3 +116,14 @@ def post_like(request, pk):
 
 def login(request):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER', '/'))
+
+def suggest(request):
+    if request.method == "POST":
+        form = Suggest_Form(request.POST)
+        if form.is_valid():
+            suggest_data = form.save(commit=False)
+            suggest_data.save()
+            return redirect('/')
+    else:
+        form = Suggest_Form()
+    return render(request, 'bcms/suggest.html', {'form':form},)
