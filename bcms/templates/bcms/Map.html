@@ -138,9 +138,15 @@
 							inform = $("#information"+id_num).val(),
       				data =  {'author': auth, 'loc_x': locx, 'loc_y': locy, 'title': tit, 'information': inform};
 							console.log(data);
-      		$.post(ajaxurl, data, function (response) {
+      		$.ajax({
+                 type:"POST",
+                 url:"/new_map_data/",
+                 data =  {'author': auth, 'loc_x': locx, 'loc_y': locy, 'title': tit, 'information': inform},
+                 success: function(){
+									 console.log("success");
+                 }
+            });
 
-      		});
 					ovlys[id_num].setMap(null);
 					ovlys[id_num].content = '<div class="wrap">' +
 							'    <button class="close" onclick="closeOverlay(' + id_num + ');">X</button>' +
