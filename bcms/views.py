@@ -4,7 +4,7 @@ from .models import Post, Like, Map_Data
 from .forms import PostForm, CommentForm, Suggest_Form, Map_Data_Form
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 import json
 from django.views.decorators.csrf import csrf_exempt
 
@@ -54,7 +54,7 @@ def newdata(request):
             map_data.loc_x = request.POST["loc_x"]
             map_data.loc_y = request.POST["loc_y"]
             map_data.save()
-            return redirect('map/')
+            return HttpResponse("success")
     return render(request, 'bcms/Map.html')
 
 
