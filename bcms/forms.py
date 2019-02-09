@@ -15,7 +15,7 @@ class CommentForm(forms.ModelForm):
 class Map_Data_Form(forms.ModelForm):
     class Meta:
         model = Map_Data
-        fields = ('', )
+        fields = ('author', 'loc_x', 'loc_y', 'title', 'information')
 
 class Suggest_Form(forms.ModelForm):
     class Meta:
