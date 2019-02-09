@@ -19,4 +19,5 @@ urlpatterns = [
     path(r'newsfeed3/', views.newsfeed3, name='newsfeed3'),
     path(r'new_map_data/', views.newdata, name='newdata'),
     path(r'suggest/', views.suggest, name='suggest'),
+    path(r'ajaxproject/', views.ajaxproject, name='ajaxproject'),
 ]

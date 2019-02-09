@@ -5,6 +5,7 @@ from .forms import PostForm, CommentForm, Map_Data_Form, Suggest_Form
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
+import json
 
 # Create your views here.
 def home(request):
@@ -44,17 +45,8 @@ def post_new(request):
     return render(request, 'bcms/post_edit.html', {'form':form},)
 
 def newdata(request):
-    if request.method == 'POST':
-        form = Map_Data_Form(request.POST)
-        if form.is_valid():
-            map_data = form.save(commit=False)
-            map_data.locationx = request.loc_x
-            map_data.locationy = request.loc_y
-            map_data.save()
-            return redirect('map')
-    else:
-        form = Map_Data_Form()
-    return render(request, 'bcms/newdata.html', {'form': form})
+    map_data = request.POST['author', 'loc_x', 'loc_y', 'title', 'information']
+    map_data.save()
 
 @login_required
 def post_edit(request, pk):

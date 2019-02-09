@@ -40,7 +40,7 @@
 		var mapContainer = document.getElementById('map'),
 		    mapOption = {
 					center: new daum.maps.LatLng(36.831498, 127.158242),
-					level: 4
+					level: 3
 				};
 
 		var map = new daum.maps.Map(mapContainer, mapOption);
@@ -129,7 +129,8 @@
 				$(".wrap").on("mouseout", function(){is_ovly = false;console.log("오버레이 벗어남");});
 				is_showed = true;
 				$("#smt"+id_num).click(function(){
-					var ajaxurl = 'http://dongwhanryu.pythonanywhere.com/new_map_data',
+					var ajaxurl = '/new_map_data/',
+							type = 'POST',
 							auth = $("#author"+id_num).val(),
 							locx = position.getLat().toString(),
 							locy = position.getLng().toString(),

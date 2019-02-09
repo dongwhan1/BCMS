@@ -228,15 +228,15 @@ hr {
 			outline: 0;
 			padding: 0;
 		}
-div.form h2 {
+div.wrap h2 {
 			text-decoration: none;
 			margin: 2px;
 			font-size: 20px;
 		}
-div.form input {
+div.wrap input {
 			width: 100%;
 		}
-div.form textarea{
+div.wrap textarea{
 			height: 100px;
 			resize: none;
 		}
