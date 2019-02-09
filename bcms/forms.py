@@ -12,6 +12,10 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('text',)
 
+class Map_Data_Form(forms.ModelForm):
+    class Meta:
+        model = Map_Data
+        fields = ('', )
 
 class Suggest_Form(forms.ModelForm):
     class Meta:
