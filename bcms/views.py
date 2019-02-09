@@ -51,8 +51,8 @@ def newdata(request):
         form = Map_Data_Form(request.POST)
         if form.is_valid():
             map_data = form.save(commit=False)
-            map_data.loc_x = form.loc_x
-            map_data.loc_y = form.loc_y
+            map_data.loc_x = request.POST.loc_x
+            map_data.loc_y = request.POST.loc_y
             map_data.save()
             return redirect('map/')
     return render(request, 'bcms/Map.html')
