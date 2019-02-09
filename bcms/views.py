@@ -55,7 +55,7 @@ def newdata(request):
             map_data.loc_y = request.loc_y
             map_data.save()
             return redirect('map/')
-    else
+    return render(request, 'bcms/Map.html')
 
 
 @login_required
