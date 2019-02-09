@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from .models import Post, Like, Map_Data
-from .forms import PostForm, CommentForm, Map_Data_Form, Suggest_Form
+from .forms import PostForm, CommentForm, Suggest_Form
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
