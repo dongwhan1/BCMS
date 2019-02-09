@@ -40,7 +40,7 @@
 		var mapContainer = document.getElementById('map'),
 		    mapOption = {
 					center: new daum.maps.LatLng(36.831498, 127.158242),
-					level: 6
+					level: 4
 				};
 
 		var map = new daum.maps.Map(mapContainer, mapOption);
@@ -85,24 +85,24 @@
 			//입력 양식 오버레이의 취소버튼을 누를 시 그에 해당하는 마커가 사라집니다.
 			//입력 양식 오버레이를 작성하여 제출할 시, 그 내뇽과 마커의 좌표(x, y 분할)를 ajax를 이용하여 new_data.py으로 전송합니다. (POST)
 			var content = '<div class="wrap">' +
-					'    <button class="close" onclick="closeOverlay(' + id_num + ');">X</button>' +
+					'    <button class="close" onclick="closeOverlay(' + id_num + ');is_ovly=false;is_showed=false;">X</button>' +
 					'    <div class="body">' +
 					'    		 ' + author + '<br>' + title + '<br>' + text +
 					'    </div>' +
 					'</div>';
 
 			var content_new_ovly = '<div class="wrap">' +
-					'    <button class="close" onclick="closeOverlay(' + id_num + ');markers[' + id_num + '].setMap(null);">X</button>' +
+					'    <button class="close" onclick="closeOverlay(' + id_num + ');markers[' + id_num + '].setMap(null);is_ovly=false;is_showed=false;">X</button>' +
 					'    <div class="body">' +
-					'    		 <form id="form' + '">' +
+					'    		 <div id="form' + '">' +
 					'            <h2>작성자</h2>' +
 					'            <input id="author' + id_num + '" type="text">' +
 					'            <h2>구체적인 장소</h2>' +
 					'            <input id="title' + id_num +'" type="text">' +
 					'            <h2>내용</h2>' +
 					'            <textarea id="information' + id_num + '"></textarea>' +
-					'            <input class="smt" type="submit" value="저장">' +
-					'        </form>' +
+					'            <button id="smt' + id_num + '">저장</button>' +
+					'        </div>' +
 					'    </div>' +
 					'</div>';
 
@@ -121,15 +121,14 @@
 
 			ovlys.push(overlay);
 
-			$(".wrap").on("mouseover", function(){is_ovly = true;console.log("오버레이 진입함");});
-			$(".wrap").on("mouseout", function(){is_ovly = false;console.log("오버레이 벗어남");});
-
 			var is_showed = false;
 
 			if(type==2) {
 				overlay.setMap(map);
+				$(".wrap").on("mouseover", function(){is_ovly = true;console.log("오버레이 진입함");});
+				$(".wrap").on("mouseout", function(){is_ovly = false;console.log("오버레이 벗어남");});
 				is_showed = true;
-				$("#form" + id_num).submit(function(){
+				$("#smt"+id_num).click(function(){
 					var ajaxurl = 'http://dongwhanryu.pythonanywhere.com/new_map_data',
 							auth = $("#author"+id_num).val(),
 							locx = position.getLat().toString(),
@@ -137,6 +136,7 @@
 							tit = $("#title"+id_num).val(),
 							inform = $("#information"+id_num).val(),
       				data =  {'author': auth, 'loc_x': locx, 'loc_y': locy, 'title': tit, 'information': inform};
+							console.log(data);
       		$.post(ajaxurl, data, function (response) {
 
       		});
@@ -153,6 +153,8 @@
 			daum.maps.event.addListener(marker, 'click', function(){
 				if(!is_showed) {
 					overlay.setMap(map);
+					$(".wrap").on("mouseover", function(){is_ovly = true;console.log("오버레이 진입함");});
+					$(".wrap").on("mouseout", function(){is_ovly = false;console.log("오버레이 벗어남");});
 					is_showed = true;
 				} else {
 					overlay.setMap(null);
