@@ -53,8 +53,8 @@ def publish(self):
 
 class Map_Data(models.Model):
     author = models.CharField(max_length=200)
-    locationx = models.FloatField()
-    locationy = models.FloatField()
+    loc_x = models.CharField(max_length=200)
+    loc_y = models.CharField(max_length=200)
     title = models.CharField(max_length=200)
     information = models.TextField()
 
