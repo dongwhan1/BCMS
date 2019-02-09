@@ -51,10 +51,11 @@ def newdata(request):
         form = Map_Data_Form(request.POST)
         if form.is_valid():
             map_data = form.save(commit=False)
-            map_data = request.loc_x
-            map_data = request.loc_y
+            map_data.loc_x = request.loc_x
+            map_data.loc_y = request.loc_y
             map_data.save()
-            return redirect('/')
+            return redirect('map/')
+    else
 
 
 @login_required
