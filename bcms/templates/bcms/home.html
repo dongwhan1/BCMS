@@ -37,11 +37,16 @@
       });
 
       $(function(){
-        $("#not1_content").text("공지사항 테스트입니다.");
+        $("#not1_content").text("");
         $("#not1").on("click", function(){
           $("#not1_content").animate({width: "toggle", height: "toggle", margin: "toggle", padding: "toggle"}, 1000);
         });
         $("#not1").trigger("click");
+        $("#not2_content").text("BCMS는 뉴스피드 기능과 커뮤니티 매핑 기능을 제공합니다.<br>뉴스피드 기능은 바로 이 공지사항 아래에 나오는 것인데요. ");
+        $("#not2").on("click", function(){
+          $("#not2_content").animate({width: "toggle", height: "toggle", margin: "toggle", padding: "toggle"}, 1000);
+        });
+        $("#not2").trigger("click");
       });
 
       $(document).ready(function(){
@@ -71,6 +76,7 @@
           </div>
           <div style="width: 34%; float: left; height: auto;">
             <img id="logo" src="https://i.imgur.com/gi9uPMy.png">
+              <font id="slogan" class="title_font">함께 만들어가는 북일</font>
           </div>
           <div style="width: 33%; float: left; height: auto;">
             <font class="title_font">건의사항</font>
@@ -83,11 +89,13 @@
         <div id="whiteboard">
             <h2>공지사항</h2>
             <h4>클릭하여 세부 내용을 보실 수 있습니다</h4>
-            <div id="not1" class="notice">테스트<div id="not1_content" class="notice"></div></div>
+            <div id="not1" class="notice">BCMS를 개발한 목적<div id="not1_content" class="notice"></div></div>
+            <div id="not2" class="notice">BCMS를 사용하는 법<div id="not2_content" class="notice"></div></div>
         </div>
 
         <div id="wboard">
-            <h2>신입생에게 한마디!!!</h2><a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+            <h2>신입생에게 한마디!!!</h2>
 
             {% for post in posts %}
                 <div class="post_board">
@@ -106,11 +114,12 @@
                 </div>
             {% endfor %}
         </div>
-        <footer>
-            <font class="dev_info">Copyright(C)2019 by Team Banada | 류동환(DongWhan Ryu) : 총괄(Manager), 백엔드(Back End), 데이터베이스(DB), 서버 관리(Server) | 김민재(KimGoon / Minjae Kim) : 프론트엔드(Front End), 디자인(Designer)</font>
-        </footer>
+
 
 </body>
 
+<footer>
+    <font class="dev_info">Copyright(C)2019 by Team Banada | 류동환(DongWhan Ryu) : 총괄(Manager), 백엔드(Back End), 데이터베이스(DB), 서버 관리(Server) | 김민재(KimGoon / Minjae Kim) : 프론트엔드(Front End), 디자인(Designer)</font>
+</footer>
 
 </html>
