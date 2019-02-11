@@ -4,7 +4,10 @@ from .models import Post, Comment, Map_Data, Suggest_Data
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ('title', 'text',)
+        help_texts = {
+            'author': '학번과 이름을 입력하세요'
+        }
+        fields = ('author', 'title', 'text',)
 
 
 class CommentForm(forms.ModelForm):
