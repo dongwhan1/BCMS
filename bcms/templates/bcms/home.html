@@ -29,6 +29,7 @@
 
       $(function(){
         $('#whiteboard').css({"border-radius": parseFloat($('#whiteboard').css("width")) / 50 + "px"});
+        $('#wboard').css({"border-radius": parseFloat($('#wboard').css("width")) / 50 + "px"});
       });
 
       $(function(){
@@ -84,6 +85,7 @@
             <h4>클릭하여 세부 내용을 보실 수 있습니다</h4>
             <div id="not1" class="notice">테스트<div id="not1_content" class="notice"></div></div>
         </div>
+
         <div id="wboard">
             <h2>신입생에게 한마디!!!</h2><a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
 
