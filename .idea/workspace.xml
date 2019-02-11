@@ -4,7 +4,6 @@
     <list default="true" id="6fa00487-bcaa-4ab8-8c54-47f885333660" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bcms/templates/bcms/Map.html" beforeDir="false" afterPath="$PROJECT_DIR$/bcms/templates/bcms/Map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bcms/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bcms/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,8 +79,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bcms/templates/bcms/Map.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="178" column="139" selection-start-line="178" selection-start-column="139" selection-end-line="178" selection-end-column="139" />
+            <state relative-caret-position="178">
+              <caret line="150" column="70" lean-forward="true" selection-start-line="150" selection-start-column="70" selection-end-line="150" selection-end-column="70" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -612,8 +611,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bcms/templates/bcms/Map.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="178" column="139" selection-start-line="178" selection-start-column="139" selection-end-line="178" selection-end-column="139" />
+        <state relative-caret-position="178">
+          <caret line="150" column="70" lean-forward="true" selection-start-line="150" selection-start-column="70" selection-end-line="150" selection-end-column="70" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>

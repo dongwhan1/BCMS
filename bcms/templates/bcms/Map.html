@@ -148,12 +148,12 @@
             });
 
 					ovlys[id_num].setMap(null);
-					ovlys[id_num].content = '<div class="wrap">' +
+					ovlys[id_num].setContent = ('<div class="wrap">' +
 							'    <button class="close" onclick="closeOverlay(' + id_num + ');">X</button>' +
 							'    <div class="body">' +
 							'    		 ' + auth + '<br>' + tit + '<br>' + inform +
 							'    </div>' +
-							'</div>';
+							'</div>');
 				});
 			}
 
