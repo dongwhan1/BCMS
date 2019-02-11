@@ -5,7 +5,6 @@ from .choices import *
 # Create your models here.
 class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
-    board = models.IntegerField(choices=BOARD_CHOICES, default=1, blank=True)
     title = models.CharField(max_length=200)
     text = models.TextField()
     created_date = models.DateTimeField(
@@ -62,6 +61,7 @@ class Map_Data(models.Model):
         return self.title
 
 class Suggest_Data(models.Model):
+    board = models.IntegerField(choices=SUGGEST_CHOICES, default=1, blank=True)
     author = models.CharField(max_length=200)
     text = models.TextField()
 

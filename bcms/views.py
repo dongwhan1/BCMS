@@ -10,23 +10,12 @@ from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 def home(request):
-    return render(request, 'bcms/home.html')
+    posts = Post.objects.all()
+    return render(request, 'bcms/home.html', {'posts': posts})
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, 'bcms/post_list.html', {'posts': posts})
-
-def newsfeed1(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now(), board=1).order_by('-published_date')
-    return render(request, 'bcms/newsfeed1.html', {'posts': posts})
-
-def newsfeed2(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now(), board=2).order_by('-published_date')
-    return render(request, 'bcms/newsfeed2.html', {'posts': posts})
-
-def newsfeed3(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now(), board=3).order_by('-published_date')
-    return render(request, 'bcms/newsfeed3.html', {'posts': posts})
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)

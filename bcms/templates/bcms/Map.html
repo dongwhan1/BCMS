@@ -24,18 +24,7 @@
 		// 마커 이미지를 생성한다
 		var markerImage = new daum.maps.MarkerImage(markerImageUrl, markerImageSize, markerImageOptions);
 
-		var positions = [  // 마커의 위치
-        new daum.maps.LatLng(36.831873, 127.158165),
-        new daum.maps.LatLng(36.831624, 127.159168),
-        new daum.maps.LatLng(36.830014, 127.158229)
-    		],
     		selectedMarker = null; // 클릭한 마커를 담을 변수
-
-		var db_data = [
-				"오버레이 텍스트1",
-				"오버레이 텍스트2",
-				"오버레이 텍스트3"
-				];
 
 		var mapContainer = document.getElementById('map'),
 		    mapOption = {
@@ -172,9 +161,6 @@
 		}
 
 		// 지도 위에 마커를 표시합니다
-		for (var i = 0, len = positions.length; i < len; i++) {
-			addMarker(positions[i], "", "", db_data[i], 1);
-		}
 
 		{% for map_data in map_datas %}
 			addMarker(new daum.maps.LatLng({{ map_data.loc_x }}, {{ map_data.loc_y }}), "{{ map_data.author }}", "{{ map_data.title }}", "{{ map_data.information }}", 1);
