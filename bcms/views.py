@@ -54,7 +54,7 @@ def newdata(request):
             map_data.loc_x = request.POST["loc_x"]
             map_data.loc_y = request.POST["loc_y"]
             map_data.save()
-            return HttpResponse("success")
+            return redirect('map')
     return render(request, 'bcms/Map.html')
 
 

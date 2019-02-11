@@ -200,7 +200,7 @@ hr {
 .wrap {
 			padding: 10px;
 			background-color: #ffffff;
-			width: 160px;
+			width: 180px;
 			border-radius: 10px;
 			white-space: pre-line;
 			position: absolute;
@@ -240,3 +240,10 @@ div.wrap textarea{
 			height: 100px;
 			resize: none;
 		}
+footer {
+    position: absolute;
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}

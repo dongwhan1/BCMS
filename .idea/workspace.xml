@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fa00487-bcaa-4ab8-8c54-47f885333660" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bcms/templates/bcms/Map.html" beforeDir="false" afterPath="$PROJECT_DIR$/bcms/templates/bcms/Map.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bcms/static/css/bcms.css" beforeDir="false" afterPath="$PROJECT_DIR$/bcms/static/css/bcms.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bcms/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/bcms/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,22 +16,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bcms/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="111" column="41" lean-forward="true" selection-start-line="111" selection-start-column="41" selection-end-line="111" selection-end-column="41" />
+            <state relative-caret-position="254">
+              <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bcms/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1102">
-              <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,7 +64,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bcms/templates/bcms/Map.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="178">
@@ -84,6 +72,15 @@
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bcms/static/css/bcms.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="245" column="19" lean-forward="true" selection-start-line="245" selection-start-column="19" selection-end-line="245" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -166,13 +163,13 @@
         <option value="$PROJECT_DIR$/bcms/templates/bcms/home.html" />
         <option value="$PROJECT_DIR$/bcms/templates/bcms/base.html" />
         <option value="$PROJECT_DIR$/manage.py" />
-        <option value="$PROJECT_DIR$/bcms/static/css/bcms.css" />
         <option value="$PROJECT_DIR$/bcms/urls.py" />
         <option value="$PROJECT_DIR$/bcms/forms.py" />
         <option value="$PROJECT_DIR$/main/settings.py" />
         <option value="$PROJECT_DIR$/bcms/models.py" />
-        <option value="$PROJECT_DIR$/bcms/views.py" />
         <option value="$PROJECT_DIR$/bcms/templates/bcms/Map.html" />
+        <option value="$PROJECT_DIR$/bcms/views.py" />
+        <option value="$PROJECT_DIR$/bcms/static/css/bcms.css" />
       </list>
     </option>
   </component>
@@ -198,6 +195,19 @@
               <item name="BCMS" type="b2602c69:ProjectViewProjectNode" />
               <item name="BCMS" type="462c0819:PsiDirectoryNode" />
               <item name="bcms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BCMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BCMS" type="462c0819:PsiDirectoryNode" />
+              <item name="bcms" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BCMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BCMS" type="462c0819:PsiDirectoryNode" />
+              <item name="bcms" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BCMS" type="b2602c69:ProjectViewProjectNode" />
@@ -489,13 +499,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bcms/static/css/bcms.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="238" column="18" lean-forward="true" selection-start-line="238" selection-start-column="18" selection-end-line="238" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
@@ -521,13 +524,6 @@
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bcms/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -592,16 +588,6 @@
     <entry file="file://$PROJECT_DIR$/bcms/templates/bcms/Map2.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/bcms/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="111" column="41" lean-forward="true" selection-start-line="111" selection-start-column="41" selection-end-line="111" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bcms/templates/bcms/post_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -616,6 +602,30 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bcms/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bcms/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bcms/static/css/bcms.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="245" column="19" lean-forward="true" selection-start-line="245" selection-start-column="19" selection-end-line="245" selection-end-column="19" />
         </state>
       </provider>
     </entry>
