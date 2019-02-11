@@ -104,7 +104,8 @@ def post_remove(request, pk):
     return redirect('post_list')
 
 def map(request):
-    return render(request, 'bcms/Map.html')
+    map_datas = Map_Data.objects.all()
+    return render(request, 'bcms/Map.html', {'map_datas':map_datas})
 
 @login_required # TODO: Ajax로 처리하기
 def post_like(request, pk):

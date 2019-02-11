@@ -175,11 +175,6 @@
 			addMarker(positions[i], "", "", db_data[i], 1);
 		}
 
-		{% for map_data in map_datas %}
-			addMarker(new daum.maps.LatLng({{ map_data.loc_x }}, {{ map_data.loc_y }}), "{{ map_data.author }}", "{{ map_data.title }}", "{{ map_data.information }}", 1);
-		{% endfor %}
-
-
 		daum.maps.event.addListener(map, "click", function(mouseEvent) {
 			if(!is_ovly) {
 				addMarker(mouseEvent.latLng, "", "", "", 2);
