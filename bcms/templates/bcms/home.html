@@ -85,6 +85,7 @@
             <div id="not1" class="notice">테스트<div id="not1_content" class="notice"></div></div>
         </div>
         <div>
+            <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
             <h2>신입생에게 한마디!!!</h2>
             {% for post in posts %}
                 <div class="post_board">
