@@ -248,7 +248,7 @@ footer {
     text-align: center;
 }
 
-.wboard {
+#wboard {
     background-color: #ffffff;
     width: 70%;
     height: auto;
