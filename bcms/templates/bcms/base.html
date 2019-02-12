@@ -21,7 +21,7 @@
     <script>
       $(function(){
         $('.middle').bind('load', function(){
-          var parentwidth = parseFloat($(".middle").parent().parent().css("width"));
+          var parentwidth = parseFloat($(".middle").parent().css("width"));
           var thiswidth = parseFloat($(".middle").css("width"));
           $(".middle").css({"margin-left": (parentwidth-thiswidth)/2 + "px"});
         });
@@ -54,7 +54,7 @@
             {% else %}
                 <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
             {% endif %}
-                <h1><a href="/newsfeed" style="font-size: 40px;">Bugil Community Mapping System</a></h1>
+                <h1><a href="/" style="font-size: 40px;">Bugil Community Mapping System</a></h1>
         </div>
 
        <div id="page_head2">

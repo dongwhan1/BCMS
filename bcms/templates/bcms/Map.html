@@ -7,6 +7,35 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{% static 'css/bcms.css' %}">
+
+	<script>
+		$(function(){
+			$('.middle').bind('load', function(){
+				var parentwidth = parseFloat($(".middle").parent().css("width"));
+				var thiswidth = parseFloat($(".middle").css("width"));
+				$(".middle").css({"margin-left": (parentwidth-thiswidth)/2 + "px"});
+			});
+			$('.middle').trigger('load');
+		});
+
+		$(function(){
+			$('#menu_bar').bind("click", function(){
+				$("#menu_board").slideToggle();
+			});
+			$("#menu_bar").trigger("click");
+		});
+
+		$(function(){
+			$("#map").css({"height":parseFloat($(document).height())-140 + "px"});
+		})
+
+		$(document).ready(function(){
+			$(window).resize(function(){
+				$(".middle").trigger('load');
+			});
+		});
+	</script>
+
 </head>
 <body>
 	<div class="page-header">
@@ -18,7 +47,7 @@
 					{% else %}
 							<a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
 					{% endif %}
-              <h1><a href="/newsfeed" style="font-size: 40px;">Bugil Community Mapping System</a></h1>
+              <h1><a href="/" style="font-size: 40px;">Bugil Community Mapping System</a></h1>
         </div>
         <div id="page_head2">
             <div id="menu_bar"><img id="menu_icon" class="middle" src="https://i.imgur.com/OuqOJ5e.png" style="margin-left: 616px;"></div>
@@ -75,15 +104,6 @@
 		var markers = [];
 		var ovlys=[];
 		var mrk_num = 0;
-
-		var mark_data = { //db에서 받아오는 데이터
-					author: 0,
-					lat: 0,
-					lng: 0,
-					text: ""
-				};
-
-		var data_arr = [];
 
 		var is_ovly = false;
 

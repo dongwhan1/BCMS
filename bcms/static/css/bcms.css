@@ -156,6 +156,15 @@ body#home .middle {
   background-color: #dddddd;
 }
 
+div#wboard a {
+  font-family: "Nanum Gothic";
+  color: #000000;
+}
+
+div#wboard span.glyphicon {
+  margin-top : 5px;
+}
+
 .dev_info {
   display: block;
   padding: 5px;
@@ -213,6 +222,7 @@ hr {
 #map {
   position: absolute;
   top: 140px;
+  z-index: 1;
 }
 
 .wrap {
@@ -272,7 +282,6 @@ footer {
     width: 100%;
     text-align: center;
 }
-
 
 #wboard {
     background-color: #ffffff;
