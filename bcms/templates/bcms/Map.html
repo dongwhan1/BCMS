@@ -12,9 +12,9 @@
 
 	<script>
 		$(function(){
-			$('.middle').bind('load', function(){
-				var parentwidth = parseFloat($(".middle").parent().css("width"));
-				var thiswidth = parseFloat($(".middle").css("width"));
+			$('#menu_bar .middle').bind('load', function(){
+				var parentwidth = parseFloat($(this).parent().css("width"));
+				var thiswidth = parseFloat($(".button").css("width"));
 				$(".middle").css({"margin-left": (parentwidth-thiswidth)/2 + "px"});
 			});
 			$('.middle').trigger('load');
