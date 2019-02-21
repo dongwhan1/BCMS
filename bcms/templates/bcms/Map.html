@@ -14,8 +14,13 @@
 		$(function(){
 			$('#menu_bar .middle').bind('load', function(){
 				var parentwidth = parseFloat($(this).parent().css("width"));
+				var thiswidth = parseFloat($(this).css("width"));
+				$(this).css({"margin-left": (parentwidth-thiswidth)/2 + "px"});
+			});
+			$('#menu_board .middle').bind('load', function(){
+				var parentwidth = parseFloat($(this).parent().css("width"));
 				var thiswidth = parseFloat($(".button").css("width"));
-				$(".middle").css({"margin-left": (parentwidth-thiswidth)/2 + "px"});
+				$(this).css({"margin-left": (parentwidth-thiswidth)/2 + "px"});
 			});
 			$('.middle').trigger('load');
 		});
