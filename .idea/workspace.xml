@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6fa00487-bcaa-4ab8-8c54-47f885333660" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/bcms/static/css/bcms.css" beforeDir="false" afterPath="$PROJECT_DIR$/bcms/static/css/bcms.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bcms/templates/bcms/Map.html" beforeDir="false" afterPath="$PROJECT_DIR$/bcms/templates/bcms/Map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bcms/templates/bcms/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/bcms/templates/bcms/base.html" afterDir="false" />
-    </list>
+    <list default="true" id="6fa00487-bcaa-4ab8-8c54-47f885333660" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,9 +226,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="101" />
-    <option name="width" value="1014" />
-    <option name="height" value="1039" />
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -351,7 +347,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="81" y="0" width="811" height="831" extended-state="0" />
+    <frame x="-6" y="0" width="781" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.33074936" />
